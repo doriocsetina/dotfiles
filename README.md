@@ -35,6 +35,12 @@ once this is done it's necessary to activate the greeter with
 
 now in the next reboot you're booted right into the the new graphical enviroment!!
 
+#### setting keymap in xorg
+
+if you have a different keyboard layout now's a good time to set it up on xorg. in my case i would run the command
+
+`localectl --no-convert set-x11-keymap it`
+
 ## configuring the graphical enviroment 
 
 ### content of this repository
