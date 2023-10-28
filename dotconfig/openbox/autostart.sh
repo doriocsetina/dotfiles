@@ -1,7 +1,8 @@
 tint2 &
 pcmanfm --desktop &
-nm-applet &
-picom --experimental-backends&
 xfce4-power-manager &
+cbatticon &
+nm-applet &
+picom &
 pasystray &
 blueman-tray &
