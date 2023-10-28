@@ -1,13 +1,26 @@
 # dotfiles
-my personal laptop setup!
-description that i will at some point finish
+my personal laptop setup! 
+a lightweight and minimal arch linux build built on openbox, with a windows-like look 
+
+![A little preview:](https://github.com/doriocsetina/dotfiles/blob/main/preview.png?raw=true)
+
+## using `setup.sh`
+the repo comes with a shell file, `setup.sh` that does exactly what it's written in this readme. the repo needs to be downloaded in the path `~/Downloads/git` so first create the directory:
+
+`mkdir -p ~/Downloads/git`
+
+then clone the repo:
+
+`git clone https://github.com/doriocsetina/dotfiles ~/Downloads/git`
+
+then enter the directory and execute the .sh file. as of right now: the file is yet untested. 
 
 ## installing arch
-i use arch (btw) as an operating system, since i'm building a very lightweight graphical enviroment. the rest of the steps start from the moment of the first reboot.
+i use arch (btw) as an operating system, since i'm building a very lightweight graphical enviroment. it's taken for granted a "complete" arch install, as in getting exactly where the official installation guide stops. also it's needed git and a working internet connections (so having enabled NetworkManager)
 
 to install arch linux refer to the [arch linux installation guide](https://wiki.archlinux.org/title/Installation_guide)
 
-## installing graphical enviroment 
+## installing graphical enviroment and apps
 i am using xorg as a display server, openbox as a window manager, lightdm as a display manager, and picom as a compositor.
 
 `sudo pacman -S xorg openbox obconf lightdm lightdm-gtk-greeter`
@@ -48,7 +61,16 @@ then inside of the folder you can run `./setup.sh` and everything should work! n
 
 ### installling yay
 
-i use yay 
+yay it's a very useful app for downloading packages from the AUR. Since i'm using it later i'm installing it earlier. First get the package
+
+`git clone https://aur.archlinux.org/yay.git ~/Downloads/git`
+
+then enter in it via `cd ~/Downloads/git/yay`
+
+and then build the package:
+`makepkg -sirc`
+
+done!
 
 ### downloading openbox themes
 i use the themes in **[addy-dclxvi/openbox-theme-collections](https://github.com/addy-dclxvi/openbox-theme-collections)** ! they're incredibile clean. I usually use the Arc-Clone
@@ -100,3 +122,4 @@ there are also shortcuts for the window placement:
 - `ctrl + super + 2` places window in the lower left corner
 - `ctrl + super + 3` places window in the lower right corner
 - `ctrl + super + 4` places window in the upper right corner
+
